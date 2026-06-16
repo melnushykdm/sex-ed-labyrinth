@@ -494,8 +494,8 @@ export default function App() {
       </button>
 
       <div className="advice-header">
-        <img
-  src="/icons/advice-icon.svg"
+       <img
+  src={`${BASE}icons/advice-icon.svg`}
   alt="Advice"
   className="advice-icon"
 />
@@ -557,7 +557,11 @@ export default function App() {
       ×
     </button>
 
-    <img className="mobile-menu-scribble" src="/icons/scribble.svg" alt="" />
+    <img
+  className="mobile-menu-scribble"
+  src={`${BASE}icons/scribble.svg`}
+  alt=""
+/>
 
     <div className="mobile-menu-links">
       <button onClick={() => { setPage("about"); setIsMenuOpen(false); }}>
