@@ -6,7 +6,7 @@ import lightning from "./assets/lightning.svg";
 import scribble from "./assets/scribble.svg";
 import characters from "./assets/characters.png";
 import aboutRight from "./assets/about-right.png";
-
+const BASE = import.meta.env.BASE_URL;
 function Header({ setPage, setIsAdviceOpen, setIsLangOpen, setIsMenuOpen }) {  return (
     <header className="header">
       <button className="burger" onClick={() => setIsMenuOpen(true)}>
@@ -151,18 +151,18 @@ function AboutPage() {
 }
 function AuthorsPage() {
   const authors = [
-    { name: "Kseniya", img: "/authors/kseniya.png", top: "70px", delay: "0s" },
-    { name: "Mădălina", img: "/authors/madalina.png", top: "70px", delay: "-5s" },
-    { name: "Ingrid", img: "/authors/ingrid.png", top: "70px", delay: "-10s" },
+  { name: "Kseniya", img: `${BASE}authors/kseniya.png`, top: "70px", delay: "0s" },
+  { name: "Mădălina", img: `${BASE}authors/madalina.png`, top: "70px", delay: "-5s" },
+  { name: "Ingrid", img: `${BASE}authors/ingrid.png`, top: "70px", delay: "-10s" },
 
-    { name: "Asya", img: "/authors/asya.png", top: "160px", delay: "-3s" },
-    { name: "Leonid", img: "/authors/leonid.png", top: "160px", delay: "-8s" },
+  { name: "Asya", img: `${BASE}authors/asya.png`, top: "160px", delay: "-3s" },
+  { name: "Leonid", img: `${BASE}authors/leonid.png`, top: "160px", delay: "-8s" },
 
-    { name: "Xheni", img: "/authors/xheni.png", top: "250px", delay: "-6s" },
+  { name: "Xheni", img: `${BASE}authors/xheni.png`, top: "250px", delay: "-6s" },
 
-    { name: "Diana", img: "/authors/diana.png", top: "340px", delay: "-2s" },
-    { name: "Kornelija", img: "/authors/kornelija.png", top: "340px", delay: "-9s" },
-  ];
+  { name: "Diana", img: `${BASE}authors/diana.png`, top: "340px", delay: "-2s" },
+  { name: "Kornelija", img: `${BASE}authors/kornelija.png`, top: "340px", delay: "-9s" },
+];
 
   return (
     <section className="authors-page">
@@ -188,12 +188,12 @@ function AuthorsPage() {
         <span className="mentors-title">Mentors</span>
 
         <div className="mentor">
-          <img src="/authors/daria.png" alt="Daria" />
+          <img src={`${BASE}authors/daria.png`} alt="Daria" />
           <span>Daria</span>
         </div>
 
         <div className="mentor">
-          <img src="/authors/arminas.png" alt="Arminas" />
+          <img src={`${BASE}authors/arminas.png`} alt="Arminas" />
           <span>Arminas</span>
         </div>
       </div>
