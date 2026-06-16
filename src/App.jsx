@@ -535,9 +535,9 @@ export default function App() {
 
       <div className="lang-scribble">
   <img
-    src="/icons/scribble.svg"
-    alt=""
-  />
+  src={`${BASE}icons/scribble.svg`}
+  alt=""
+/>
 </div>
 
       <div className="lang-list">
